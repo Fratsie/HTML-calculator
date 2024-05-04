@@ -2,20 +2,28 @@
 let textNumbers = 0.0;
 let textText = "";
 let operator = "";
+let display = false;
 
 //function to update the text
 function updateText(type, number){
+    if(display){
+        textText = "";
+    }
+
     if(type == "number"){
         textText += number;
     }
     else if(type == "equals"){
-        textText = textNumbers.toString();
+        textText = textNumbers;
     }
     else if(type == "point"){
         textText += ".";
     }
     else if(type == "minus"){
         textText += "-"
+    }
+    else if(type == "percent"){
+
     }
 
     if(textText != ""){
@@ -57,7 +65,8 @@ function changeOperator(chosenOperator){
 
     operator = chosenOperator;
     textText = "";
-    updateText('', 0.0);
+    updateText('equals', 0.0);
+    display = true
 }
 
 //function for click on '=' button
