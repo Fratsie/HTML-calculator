@@ -1,7 +1,7 @@
 //declaration variables
-textNumbers = 0;
-textText = "";
-operator = "";
+let textNumbers = 0.0;
+let textText = "";
+let operator = "";
 
 //function to update the text
 function updateText(type, number){
@@ -10,6 +10,12 @@ function updateText(type, number){
     }
     else if(type == "equals"){
         textText = textNumbers.toString();
+    }
+    else if(type == "point"){
+        textText += ".";
+    }
+    else if(type == "minus"){
+        textText += "-"
     }
 
     if(textText != ""){
@@ -23,7 +29,7 @@ function updateText(type, number){
 //function to execute operators
 function changeOperator(chosenOperator){
     //declaration
-    number = parseInt(textText);
+    number = parseFloat(textText);
 
     //check if operator has been selected before
     if(operator != "" && textText != "0"){
@@ -37,7 +43,7 @@ function changeOperator(chosenOperator){
             textNumbers *= number;
         }
         else{
-            if(number != 0){
+            if(number != 0.0){
                 textNumbers /= number;
             }
             else{
@@ -51,13 +57,13 @@ function changeOperator(chosenOperator){
 
     operator = chosenOperator;
     textText = "";
-    updateText('', 0);
+    updateText('', 0.0);
 }
 
 //function for click on '=' button
 function equal(){
     //declaration
-    number = parseInt(textText);
+    number = parseFloat(textText);
 
     //check if operator has been selected before
     if(operator != ""){
@@ -71,7 +77,7 @@ function equal(){
             textNumbers *= number;
         }
         else{
-            if(number != 0){
+            if(number != 0.0){
                 textNumbers /= number;
             }
             else{
@@ -82,12 +88,12 @@ function equal(){
 
     operator = "";
 
-    updateText('equals', 0)
+    updateText('equals', 0.0)
 }
 
 //function to reset everything
 function reset(){
-    textNumbers = 0;
+    textNumbers = 0.0;
     textText = "";
     operator = "";
 
