@@ -57,3 +57,12 @@ h1{
 .button:hover{
     cursor: pointer;
 }
+
+#bottomLine {
+    height: 2px;
+    width: 100px;
+
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 50px;
+}

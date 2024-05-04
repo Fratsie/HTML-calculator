@@ -8,6 +8,7 @@ let display = false;
 function updateText(type, number){
     if(display){
         textText = "";
+        display = false;
     }
 
     if(type == "number"){
@@ -107,4 +108,17 @@ function reset(){
     operator = "";
 
     updateText('', '');
+}
+
+let interval = window.setInterval(addTimeP, 500);
+
+//get time
+function addTimeP(){
+    let today = new Date();
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+
+    let text = hours + ":" + minutes;
+    
+    document.getElementById('time').innerHTML = text;
 }
