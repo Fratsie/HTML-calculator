@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Calculator</title>
+
+    <script src="/script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <div id="phone">
+            <div id="topLine">
+
+            </div>
+
+            <div style="height: 15vh;"></div>
+
+            <div id="firstLine" class="line" style="height: 80px;">
+                <p id="text" style="background-color: black; color: white; text-align: end; margin: 30px;
+                font-size: 20pt; font-family: fantasy;">0</p>
+            </div>
+
+            <div id="topLine" class="line">
+                <button onclick="reset()" class="button" style="background-color: #d3d3d3; color: black;">
+                    C
+                </button>
+
+                <button class="button" style="background-color: #d3d3d3; color: black;">
+                    &PlusMinus;
+                </button>
+
+                <button class="button" style="background-color: #d3d3d3; color: black;">
+                    %
+                </button>
+
+                <button onclick="changeOperator('divide')" class="button" style="font-size: 14pt; background-color: orange;">
+                    &divide;
+                </button>
+            </div>
+            <div id="secondLine" class="line">
+                <button class="button" onclick="updateText('number', 7)">
+                    7
+                </button>
+
+                <button class="button" onclick="updateText('number', 8)">
+                    8
+                </button>
+
+                <button class="button" onclick="updateText('number', 9)">
+                    9
+                </button>
+
+                <button onclick="changeOperator('multiply')" class="button" style="background-color: orange;">
+                    x
+                </button>
+            </div>
+
+            <div id="thirdLine" class="line">
+                <button class="button" onclick="updateText('number', 4)">
+                    4
+                </button>
+
+                <button class="button" onclick="updateText('number', 5)">
+                    5
+                </button>
+
+                <button class="button" onclick="updateText('number', 6)">
+                    6
+                </button>
+
+                <button onclick="changeOperator('subtract')" class="button" style="background-color: orange;">
+                    -
+                </button>
+            </div>
+
+            <div id="topLine" class="line">
+                <button class="button" onclick="updateText('number', 1)">
+                    1
+                </button>
+
+                <button class="button" onclick="updateText('number', 2)">
+                    2
+                </button>
+
+                <button class="button" onclick="updateText('number', 3)">
+                    3
+                </button>
+
+                <button onclick="changeOperator('add')" class="button" style="background-color: orange;">
+                    +
+                </button>
+            </div>
+
+            <div id="topLine" class="line">
+                <button class="button" style="width: 122px; border-radius: 25px;" onclick="updateText('number', 0)">
+                    0
+                </button>
+
+                <button class="button">
+                    .
+                </button>
+
+                <button onclick="equal()" class="button" style="background-color: orange;">
+                    =
+                </button>
+            </div>
+
+            <div id="bottomLine">
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
